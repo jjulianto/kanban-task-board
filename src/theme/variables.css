@@ -336,6 +336,8 @@ ion-datetime {
   --ion-color-base-rgb: 0, 82, 204;
   --ion-color-contrast: #ffffff;
   --ion-color-contrast-rgb: 255, 255, 255;
+  --background: white;
+  --background-rgb: 255, 255, 255;
 }
 
 ion-button {
