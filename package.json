@@ -1,7 +1,9 @@
 {
-  "name": "adhivasindo-test",
+  "name": "julianto-kanban-board",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.0",
+  "description": "Kanban Board Application - Technical Assessment Project",
+  "author": "Julianto",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -19,10 +21,16 @@
     "@capacitor/status-bar": "7.0.3",
     "@ionic/react": "^8.5.0",
     "@ionic/react-router": "^8.5.0",
+    "@ionic/storage": "^4.0.0",
     "@types/react-router": "^5.1.20",
     "@types/react-router-dom": "^5.3.3",
+    "dnd-multi-backend": "^9.0.0",
     "ionicons": "^7.4.0",
     "react": "19.0.0",
+    "react-dnd": "^16.0.1",
+    "react-dnd-html5-backend": "^16.0.1",
+    "react-dnd-multi-backend": "^9.0.0",
+    "react-dnd-touch-backend": "^16.0.1",
     "react-dom": "19.0.0",
     "react-router": "^5.3.4",
     "react-router-dom": "^5.3.4"
@@ -52,6 +60,5 @@
   },
   "overrides": {
     "rollup": "4.44.0"
-  },
-  "description": "An Ionic project"
+  }
 }

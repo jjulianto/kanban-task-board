@@ -1,2 +1,343 @@
 /* For information on how to create your own theme, please see:
 http://ionicframework.com/docs/theming/ */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --ion-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans',
+    'Helvetica Neue', sans-serif;
+
+  --ion-color-primary: #0052cc;
+  --ion-color-primary-rgb: 0, 82, 204;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-primary-shade: #0047b3;
+  --ion-color-primary-tint: #1a66d1;
+
+  --ion-color-secondary: #36b37e;
+  --ion-color-secondary-rgb: 54, 179, 126;
+  --ion-color-secondary-contrast: #ffffff;
+  --ion-color-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-secondary-shade: #309e6f;
+  --ion-color-secondary-tint: #4abb8b;
+
+  --ion-color-tertiary: #6554c0;
+  --ion-color-tertiary-rgb: 101, 84, 192;
+  --ion-color-tertiary-contrast: #ffffff;
+  --ion-color-tertiary-contrast-rgb: 255, 255, 255;
+  --ion-color-tertiary-shade: #594aa9;
+  --ion-color-tertiary-tint: #7465c6;
+
+  --ion-color-success: #2dd36f;
+  --ion-color-success-rgb: 45, 211, 111;
+  --ion-color-success-contrast: #ffffff;
+  --ion-color-success-contrast-rgb: 255, 255, 255;
+  --ion-color-success-shade: #28ba62;
+  --ion-color-success-tint: #42d77d;
+
+  --ion-color-warning: #ffab00;
+  --ion-color-warning-rgb: 255, 171, 0;
+  --ion-color-warning-contrast: #ffffff;
+  --ion-color-warning-contrast-rgb: 255, 255, 255;
+  --ion-color-warning-shade: #e09600;
+  --ion-color-warning-tint: #ffb31a;
+
+  --ion-color-danger: #de350b;
+  --ion-color-danger-rgb: 222, 53, 11;
+  --ion-color-danger-contrast: #ffffff;
+  --ion-color-danger-contrast-rgb: 255, 255, 255;
+  --ion-color-danger-shade: #c32f0a;
+  --ion-color-danger-tint: #e14924;
+
+  --ion-color-dark: #172b4d;
+  --ion-color-dark-rgb: 23, 43, 77;
+  --ion-color-dark-contrast: #ffffff;
+  --ion-color-dark-contrast-rgb: 255, 255, 255;
+  --ion-color-dark-shade: #142642;
+  --ion-color-dark-tint: #2e3f5f;
+
+  --ion-color-medium: #5e6c84;
+  --ion-color-medium-rgb: 94, 108, 132;
+  --ion-color-medium-contrast: #ffffff;
+  --ion-color-medium-contrast-rgb: 255, 255, 255;
+  --ion-color-medium-shade: #535f74;
+  --ion-color-medium-tint: #6e7b90;
+
+  --ion-color-light: #f4f5f7;
+  --ion-color-light-rgb: 244, 245, 247;
+  --ion-color-light-contrast: #172b4d;
+  --ion-color-light-contrast-rgb: 23, 43, 77;
+  --ion-color-light-shade: #d7d9dc;
+  --ion-color-light-tint: #f5f6f8;
+
+  --app-background: #fafbfc;
+  --app-surface: #ffffff;
+  --app-border: #dfe1e6;
+  --app-text-primary: #172b4d;
+  --app-text-secondary: #5e6c84;
+  --app-text-disabled: #97a0af;
+
+  --priority-critical: #de350b;
+  --priority-high: #ff5630;
+  --priority-medium: #ffab00;
+  --priority-low: #36b37e;
+
+  --label-feature: #0052cc;
+  --label-bug: #c9302c;
+  --label-issue: #ffab00;
+  --label-undefined: #97a0af;
+
+  --column-todo: #0052cc;
+  --column-doing: #ffab00;
+  --column-review: #ff5630;
+  --column-done: #36b37e;
+  --column-rework: #de350b;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--ion-color-light);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--ion-color-medium-tint);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--ion-color-medium);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+button:focus,
+ion-button:focus {
+  outline: 2px solid var(--ion-color-primary);
+  outline-offset: 2px;
+}
+
+.toast-success {
+  --background: var(--ion-color-success);
+  --color: white;
+}
+
+.toast-danger {
+  --background: var(--ion-color-danger);
+  --color: white;
+}
+
+.toast-warning {
+  --background: var(--ion-color-warning);
+  --color: white;
+}
+
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+* {
+  font-family: var(--ion-font-family);
+}
+
+body,
+ion-app,
+ion-content,
+ion-card,
+ion-button,
+ion-input,
+ion-textarea,
+ion-select,
+ion-label,
+ion-item {
+  font-family: var(--ion-font-family);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ion-font-family);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+p,
+span,
+div {
+  font-family: var(--ion-font-family);
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+ion-alert {
+  --background: #ffffff;
+  --color: #172b4d;
+}
+
+ion-alert .alert-wrapper {
+  background: #ffffff !important;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15) !important;
+  border-radius: 8px !important;
+}
+
+ion-alert .alert-head {
+  background: #ffffff !important;
+}
+
+ion-alert .alert-title {
+  color: #172b4d !important;
+  font-weight: 600 !important;
+  font-size: 18px !important;
+}
+
+ion-alert .alert-message {
+  color: #42526e !important;
+  font-size: 14px !important;
+  line-height: 1.5 !important;
+}
+
+ion-alert .alert-button {
+  color: #0052cc !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
+}
+
+ion-alert .alert-button.alert-button-role-destructive {
+  color: #de350b !important;
+  text-transform: none !important;
+}
+
+ion-alert .alert-button.alert-button-role-cancel {
+  color: #6b778c !important;
+  text-transform: none !important;
+}
+
+ion-checkbox {
+  --background: #ffffff !important;
+  --background-checked: #0052cc !important;
+  --border-color: #dfe1e6 !important;
+  --border-color-checked: #0052cc !important;
+  --border-width: 2px !important;
+  --border-radius: 3px !important;
+  --checkmark-color: #ffffff !important;
+  --checkmark-width: 2px !important;
+}
+
+ion-checkbox:hover {
+  --border-color: #0052cc !important;
+}
+
+ion-checkbox.checkbox-checked {
+  --background: #0052cc !important;
+  --border-color: #0052cc !important;
+}
+
+ion-checkbox::part(container) {
+  background: #ffffff !important;
+  border-color: #dfe1e6 !important;
+}
+
+ion-checkbox.checkbox-checked::part(container) {
+  background: #0052cc !important;
+  border-color: #0052cc !important;
+}
+
+ion-datetime {
+  --ion-color-primary: #0052cc;
+  --ion-color-base: #0052cc;
+  color: #172b4d;
+}
+
+ion-datetime *[class*='calendar-day'] {
+  color: #172b4d !important;
+}
+
+ion-datetime button {
+  color: #172b4d !important;
+}
+
+ion-datetime .calendar-day {
+  color: #172b4d !important;
+}
+
+ion-datetime .calendar-day.calendar-day-active,
+ion-datetime .calendar-day-active {
+  background: #0052cc !important;
+  color: white !important;
+}
+
+ion-datetime button.calendar-day.calendar-day-active,
+ion-datetime button.calendar-day-active {
+  background: #0052cc !important;
+  color: white !important;
+}
+
+ion-datetime .datetime-calendar .calendar-day.calendar-day-active {
+  background: #0052cc !important;
+  color: white !important;
+}
+
+ion-datetime .datetime-calendar button.calendar-day-active {
+  background: #0052cc !important;
+  color: white !important;
+}
+
+ion-datetime {
+  --ion-color-primary: #0052cc;
+  --ion-color-primary-rgb: 0, 82, 204;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-base: #0052cc;
+  --ion-color-base-rgb: 0, 82, 204;
+  --ion-color-contrast: #ffffff;
+  --ion-color-contrast-rgb: 255, 255, 255;
+}
+
+ion-button {
+  text-transform: none !important;
+}

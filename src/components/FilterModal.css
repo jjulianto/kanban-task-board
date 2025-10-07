@@ -1,0 +1,441 @@
+.filter-modal {
+  --width: 680px;
+  --height: 480px;
+  --border-radius: 8px;
+  --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.filter-modal-container {
+  display: flex;
+  flex-direction: column;
+  height: 480px;
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.filter-modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  border-bottom: 1px solid #e4e6ea;
+  background: white;
+  flex-shrink: 0;
+}
+
+.filter-modal-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0;
+}
+
+.filter-modal-content {
+  flex: 1;
+  display: flex;
+  background: white;
+  overflow: hidden;
+}
+
+.filter-sidebar {
+  width: 200px;
+  background: #f4f5f7;
+  border-right: 1px solid #e4e6ea;
+  padding: 16px 0;
+  flex-shrink: 0;
+}
+
+.filter-category {
+  padding: 12px 24px;
+  font-size: 14px;
+  color: #5e6c84;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-left: 3px solid transparent;
+}
+
+.filter-category:hover {
+  background: #ebecf0;
+  color: #172b4d;
+}
+
+.filter-category.active {
+  background: #deebff;
+  color: #0052cc;
+  border-left-color: #0052cc;
+  font-weight: 500;
+}
+
+.filter-main-content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  min-width: 0;
+}
+
+.filter-content-section {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-input-wrapper {
+  margin-bottom: 16px;
+}
+
+.filter-search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  font-size: 14px;
+  background: #f4f5f7;
+  color: #172b4d;
+}
+
+.filter-search-input::placeholder {
+  color: #5e6c84;
+}
+
+.filter-search-input:focus {
+  outline: none;
+  border-color: #0052cc;
+  background: white;
+}
+
+.filter-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.filter-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.filter-option:hover {
+  background: #f4f5f7;
+  margin: 0 -12px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.filter-option-label {
+  font-size: 14px;
+  color: #172b4d;
+  flex: 1;
+}
+
+.assignee-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.assignee-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #0052cc;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: bold;
+}
+
+.date-range-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.date-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #172b4d;
+}
+
+.filter-datetime {
+  --background: #f4f5f7;
+  --color: #172b4d;
+  border: 1px solid #dfe1e6;
+  border-radius: 4px;
+  padding: 12px;
+  font-size: 14px;
+  min-height: 44px;
+}
+
+.filter-modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 16px 24px;
+  border-top: 1px solid #e4e6ea;
+  background: #f4f5f7;
+  flex-shrink: 0;
+}
+
+.footer-buttons {
+  display: flex;
+  gap: 12px;
+}
+
+.clear-btn {
+  --color: #5e6c84;
+  --border-color: #dfe1e6;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 36px;
+  background: white;
+  text-transform: none;
+}
+
+.clear-btn:hover {
+  --color: #172b4d;
+  --border-color: #8993a4;
+}
+
+.apply-btn {
+  --background: #0052cc;
+  --color: white;
+  --padding-start: 16px;
+  --padding-end: 16px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  min-height: 36px;
+  text-transform: none;
+}
+
+.apply-btn:hover {
+  --background: #0747a6;
+}
+
+.filter-option ion-checkbox {
+  --size: 18px;
+  --checkmark-color: white;
+  --background: white !important;
+  --background-checked: #0052cc !important;
+  --border-color: #dfe1e6 !important;
+  --border-color-checked: #0052cc !important;
+  --border-width: 2px;
+  --border-radius: 3px;
+}
+
+.filter-option ion-checkbox:hover {
+  --border-color: #0052cc !important;
+}
+
+.filter-option ion-checkbox:not(.checkbox-checked) {
+  --background: white !important;
+  --border-color: #dfe1e6 !important;
+}
+
+.filter-option ion-checkbox.checkbox-checked {
+  --background: #0052cc !important;
+  --background-checked: #0052cc !important;
+  --border-color: #0052cc !important;
+  --border-color-checked: #0052cc !important;
+}
+
+.single-date-section {
+  padding: 16px 0;
+}
+
+.date-input-wrapper {
+  position: relative;
+  margin-top: 8px;
+}
+
+.filter-date-input {
+  --background: #f4f5f7 !important;
+  --color: #172b4d;
+  --border-color: #dfe1e6;
+  --border-radius: 3px;
+  --border-style: solid;
+  --border-width: 1px;
+  --padding-start: 12px;
+  --padding-end: 12px;
+  --padding-top: 8px;
+  --padding-bottom: 8px;
+  --placeholder-color: #8993a4;
+  font-size: 14px;
+  min-height: 36px;
+  cursor: pointer;
+}
+
+.filter-date-input:hover {
+  --border-color: #0052cc;
+}
+
+.filter-modal ion-popover::part(content) {
+  --width: auto;
+  --min-width: 320px;
+  --max-width: 90vw;
+}
+
+.filter-modal ion-popover ion-datetime {
+  --background: white;
+  --color: #172b4d;
+  --ion-color-primary: #0052cc;
+  --ion-color-primary-rgb: 0, 82, 204;
+  --ion-color-primary-contrast: #ffffff;
+  --ion-color-primary-contrast-rgb: 255, 255, 255;
+}
+
+.filter-modal ion-popover ion-datetime::part(month-year-button) {
+  color: #172b4d;
+  font-weight: 500;
+}
+
+.filter-modal ion-popover ion-datetime::part(calendar-day-today) {
+  color: #0052cc;
+  font-weight: 600;
+  border: 1px solid #0052cc;
+}
+
+@media (max-width: 768px) {
+  .filter-modal {
+    --width: 90vw;
+    --height: 85vh;
+  }
+
+  .filter-modal-container {
+    height: 85vh;
+  }
+
+  .filter-modal-content {
+    flex-direction: column;
+  }
+
+  .filter-sidebar {
+    width: 100%;
+    flex-direction: row;
+    padding: 12px 16px;
+    overflow-x: auto;
+    border-right: none;
+    border-bottom: 1px solid #e4e6ea;
+  }
+
+  .sidebar-item {
+    white-space: nowrap;
+    padding: 8px 16px;
+    margin-right: 8px;
+    border-radius: 4px;
+    min-width: auto;
+  }
+
+  .filter-content-area {
+    padding: 16px;
+  }
+
+  .assignee-list {
+    grid-template-columns: 1fr;
+  }
+
+  .date-range-section {
+    gap: 12px;
+  }
+
+  .date-input-group {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .filter-modal {
+    --width: 95vw;
+    --height: 90vh;
+  }
+
+  .filter-modal-container {
+    height: 90vh;
+  }
+
+  .filter-modal-header {
+    padding: 12px 16px;
+  }
+
+  .filter-modal-title {
+    font-size: 18px;
+  }
+
+  .filter-sidebar {
+    padding: 8px 12px;
+  }
+
+  .sidebar-item {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+
+  .filter-content-area {
+    padding: 12px;
+  }
+
+  .filter-search-input {
+    font-size: 16px;
+  }
+
+  .assignee-option {
+    gap: 8px;
+  }
+
+  .assignee-avatar {
+    width: 28px;
+    height: 28px;
+    font-size: 10px;
+  }
+
+  .filter-option-label {
+    font-size: 13px;
+  }
+
+  .filter-footer {
+    padding: 12px 16px;
+    gap: 8px;
+  }
+
+  .filter-footer ion-button {
+    font-size: 13px;
+    --padding-start: 16px;
+    --padding-end: 16px;
+    --padding-top: 10px;
+    --padding-bottom: 10px;
+  }
+
+  @media (max-width: 360px) {
+    .filter-footer {
+      flex-direction: column;
+    }
+
+    .filter-footer ion-button {
+      width: 100%;
+    }
+  }
+}

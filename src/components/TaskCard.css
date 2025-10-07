@@ -1,0 +1,271 @@
+.task-card {
+  margin: 0 0 16px 0;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #ebf3f5;
+  padding: 8px;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  position: relative;
+}
+
+.task-card:hover {
+  background: #e0eef8;
+}
+
+.task-delete-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all 0.2s ease;
+  z-index: 2;
+  border: 1px solid #e0e6ea;
+}
+
+.task-delete-btn:hover {
+  background: #ffebee;
+  border-color: #f44336;
+}
+
+.task-delete-btn ion-icon {
+  color: #6b778c;
+}
+
+.task-delete-btn:hover ion-icon {
+  color: #f44336;
+}
+
+.task-card:hover .task-delete-btn {
+  opacity: 1;
+}
+
+.task-cover-image {
+  width: 100%;
+  height: 120px;
+  overflow: hidden;
+}
+
+.task-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
+}
+
+.task-content {
+  padding: 12px 0 16px;
+}
+
+.task-badges-section {
+  display: flex;
+  gap: 6px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.task-label-chip,
+.task-priority-chip {
+  --background: #0052cc;
+  --color: white;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  height: 20px;
+  --border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.task-label-chip[color='primary'] {
+  --background: #0052cc;
+}
+
+.task-label-chip[color='danger'] {
+  --background: #de350b;
+}
+
+.task-label-chip[color='warning'] {
+  --background: #ff8b00;
+}
+
+.task-label-chip[color='medium'] {
+  --background: #6b778c;
+}
+
+.task-priority-chip[color='danger'] {
+  --background: #de350b;
+}
+
+.task-priority-chip[color='warning'] {
+  --background: #ff8b00;
+}
+
+.task-priority-chip[color='success'] {
+  --background: #36b37e;
+}
+
+.task-priority-chip[color='medium'] {
+  --background: #6b778c;
+}
+
+.progress-section {
+  margin-bottom: 12px;
+}
+
+.progress-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b778c;
+}
+
+.progress-text ion-icon {
+  color: #6b778c;
+}
+
+.attachments-count {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #6b778c;
+}
+
+.attachments-count ion-icon {
+  color: #6b778c;
+}
+
+.task-progress {
+  height: 4px;
+  --background: #f4f5f7;
+  --progress-background: #36b37e;
+  border-radius: 2px;
+}
+
+.task-info {
+  margin-bottom: 12px;
+}
+
+.task-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.task-description {
+  font-size: 12px;
+  color: #6b778c;
+  margin: 0;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.task-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.task-meta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.due-date {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #62919d;
+  background-color: #c9e6f0;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.due-date ion-icon {
+  color: #62919d;
+}
+
+.task-id {
+  font-size: 12px;
+  color: #8993a4;
+  font-weight: 500;
+}
+
+.assignees-section {
+  display: flex;
+  align-items: center;
+}
+
+.assignee-avatar {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #0052cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-left: -6px;
+  position: relative;
+  z-index: 1;
+}
+
+.assignee-avatar:first-child {
+  margin-left: 0;
+}
+
+.assignee-avatar:last-child {
+  z-index: 2;
+}
+
+.avatar-initials {
+  font-size: 10px;
+  font-weight: bold;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .task-card {
+    margin-bottom: 12px;
+  }
+
+  .task-content {
+    padding: 10px 14px 14px;
+  }
+
+  .task-title {
+    font-size: 13px;
+  }
+
+  .task-description {
+    font-size: 11px;
+  }
+}
